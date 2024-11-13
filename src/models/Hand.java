@@ -18,7 +18,7 @@ public class Hand {
         }
     }
 
-    private ArrayList total() {
+    public ArrayList total() {
 
         ArrayList holder = new ArrayList<>();
         if (!hand.isEmpty()) {
@@ -50,7 +50,7 @@ public class Hand {
         }
     }
 
-    public ArrayList<Card> showHand() {
+    public ArrayList<Card> getHand() {
         return hand;
     }
 

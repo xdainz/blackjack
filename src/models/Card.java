@@ -18,12 +18,12 @@ public class Card {
     }
 
     public void setValue(int value) {
-        if (value <= 10){
+        if (value <= 10) {
             this.value = value;
         } else {
             this.value = 10;
         }
-        
+
     }
 
     public String getFigure() {
@@ -58,6 +58,23 @@ public class Card {
 
     public void setType(CardType type) {
         this.type = type;
+    }
+
+    public String getIcon() {
+        if (this.getType() == CardType.Spades) {
+            return "♠️";
+        } else if (this.getType() == CardType.Hearts) {
+            return "❤️";
+        } else if (this.getType() == CardType.Diamonds) {
+            return "♦️";
+        } else {
+            return "♣";
+        }
+    }
+
+    public String showCard() {
+        return this.getFigure() + this.getIcon();
+        
     }
 
     @Override
