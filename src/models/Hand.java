@@ -8,7 +8,7 @@ public class Hand {
 
     public Hand() {
         hand = new ArrayList<>();
-        
+
     }
 
     public void draw(Deck deck) {
@@ -52,6 +52,15 @@ public class Hand {
 
     public ArrayList<Card> getHand() {
         return hand;
+    }
+
+    public boolean hasBlackjack() {
+        if (this.getHand().size() == 2) {
+            // checkiamos si el dealer tiene blackjack
+            return (this.getHand().getFirst().getValue() == 1 && this.getHand().getLast().getValue() == 10) || (this.getHand().getFirst().getValue() == 1 && this.getHand().getLast().getValue() == 10);
+        } else {
+            return false;
+        }
     }
 
     @Override
