@@ -25,7 +25,7 @@ public class Window extends javax.swing.JFrame {
         txtPlayer.setText(game.showPlayerHand());
 
         txtPlayerTotal.setText(String.valueOf(game.getPlayerTotal()));
-        
+
         // dealer total start for testing
         // txtDealerTotal.setText(String.valueOf(game.getDealerTotal()));
     }
@@ -162,7 +162,7 @@ public class Window extends javax.swing.JFrame {
                 // run this return inside a pop up
                 this.setEnabled(false);
                 new EndFrame(game.getWinner()).setVisible(true);
-               
+
             }
         }
     }//GEN-LAST:event_btnHitActionPerformed
@@ -191,7 +191,10 @@ public class Window extends javax.swing.JFrame {
                 }
 
             }
+
         }
+        txtDealer.setText(game.showDealerHand());
+        txtDealerTotal.setText(String.valueOf(game.getDealerTotal()));
         // this return inside a pop up
         this.setEnabled(false);
         new EndFrame(game.getWinner()).setVisible(true);

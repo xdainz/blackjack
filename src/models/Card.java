@@ -61,15 +61,12 @@ public class Card {
     }
 
     public String getIcon() {
-        if (this.getType() == CardType.Spades) {
-            return "♠️";
-        } else if (this.getType() == CardType.Hearts) {
-            return "❤️";
-        } else if (this.getType() == CardType.Diamonds) {
-            return "♦️";
-        } else {
-            return "♣";
-        }
+        return switch (this.getType()) {
+            case Spades -> "♠️";
+            case Hearts -> "❤️";
+            case Diamonds -> "♦️";
+            default -> "♣";
+        };
     }
 
     public String showCard() {
